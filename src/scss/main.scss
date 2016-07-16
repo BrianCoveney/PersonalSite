@@ -46,7 +46,7 @@ nav {
 		flex-wrap:wrap;
 		list-style: none;
 		margin: 0;
-	padding: 0;
+		padding: 0;
 
 		a{
 			margin-right: 30px;
@@ -95,7 +95,7 @@ main{
 	.fullscreen_img_container{
 		display: flex;
 			.fullscreen_img{
-				background: url('/dist/images/typing2.png')no-repeat center center;
+				background: url('/dist/images/typing2.jpg')no-repeat center center;
 				background-size: cover;
 				min-height: 98vh;
 				min-width: 100vw;
