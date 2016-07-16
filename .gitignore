@@ -1,0 +1,11 @@
+#config.rb
+.sass-cache
+
+*.csv
+
+node_modules
+npm-debug.log
+
+# ignore generated source maps
+*.css.map
+*.js.map
