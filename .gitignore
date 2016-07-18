@@ -6,6 +6,8 @@
 node_modules
 npm-debug.log
 
+.idea
+
 # ignore generated source maps
 *.css.map
 *.js.map
