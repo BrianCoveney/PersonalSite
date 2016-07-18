@@ -78,7 +78,7 @@ nav {
 main{
 	display: flex;
 	flex-wrap: wrap;
-	background-color:red;
+	//background-color:red;
 	justify-content:center;
 	margin-bottom: 0px;
 
@@ -95,7 +95,7 @@ main{
 	.fullscreen_img_container{
 		display: flex;
 			.fullscreen_img{
-				background: url('/dist/images/typing2.jpg')no-repeat center center;
+				background: url('../images/typing2.jpg')no-repeat center center;
 				background-size: cover;
 				min-height: 98vh;
 				min-width: 100vw;
@@ -108,17 +108,16 @@ main{
 
 .fullscreen_img{
 	display:flex;
+    justify-content: center;
 
 	.scroll_container{
-		display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  flex-basis: 100%;
-		
+      display: flex;
+
 		.scroll_arrow{
 			align-self: flex-end;
 			width: 75px;
 			height: 75px;
+            margin: 0 auto;
 			
 			&:hover{ 
 				cursor: pointer; 
