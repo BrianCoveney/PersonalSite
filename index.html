@@ -3,18 +3,18 @@
 <head>
 	<title>Brian's Site Home</title>
 	<link rel="stylesheet" type="text/css" href="dist/css/main.css">
-	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="src/js/jquery.min.js"></script>
 </head>
 <body>
 	<nav class="navigation">
 		<ul>
-			<li><a class="active" href="index.html">Home</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="#part1" class="active">Home</a></li>
+			<li><a href="#part2" class="active">About</a></li>
+			<li><a href="#part3" class="active">Contact</a></li>
 		</ul>
 	</nav>
 	<main>
-		<div class="fullscreen_img_container">
+		<div id="part1" class="fullscreen_img_container">
 			<div class="fullscreen_img">
 				<span class="scroll_container down">
 					<svg class="scroll_arrow" height="68.182mm" width="50.547mm"  viewBox="0 0 179.10483 241.58908">
@@ -28,11 +28,15 @@
 			</div>
 		</div>
 		<section>
-			<h2 class="content section">Section content</h2>
-		</section>
+            <div id="part2">
+			    <h2 class="content section">Section content</h2>
+		    </div>
+        </section>
 		<article>
-			<h2 class="content2">Article content</h2>
-		</article>
+            <div id="part3">
+			    <h2 class="content2">Article content</h2>
+	        </div>
+        </article>
 		<aside class="content2">
 			<h3>Aside Content</h3>
 		</aside>
