@@ -80,7 +80,7 @@ main{
 	flex-wrap: wrap;
 	//background-color:red;
 	justify-content:center;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 
 	.hero_img_container{
 		margin: 20px;
@@ -142,7 +142,7 @@ main{
 	aside{
 		background-color: green;
 		min-height: 70vh;
-		flex-basis: 50%;
+		flex-basis:50%;
 	}
 
 	p{
@@ -150,16 +150,79 @@ main{
 	}
 
 
+
+
+
+
 footer{
 	background-color: yellow;
 	min-height: 200px;
 	flex:1;
 
+
 	p{
 		color: red;
 		text-align: center;
+		margin: 0;
 	}
 }
+
+
+
+
+.scrollContainer{
+	padding-top:10px;
+}
+
+
+.svgArrow
+{
+	height: 32px;
+	width: 32px;
+}
+
+
+.scrollContainer:hover{
+	padding-top: 5px;
+	padding-bottom: -5px;
+	-webkit-transition: padding 500ms ease;
+	-moz-transition: padding 500ms ease;
+	-o-transition: padding 500ms ease;
+	-ms-accelerator-transition: padding 500ms ease;
+	transition: padding 500ms ease;
+}
+
+.scrollTopWrapper:hover #svgTopRect{
+	fill: #000;
+}
+
+.scrollTopWrapper
+{
+	height: 50px;
+	width: 50px;
+
+	display: none;
+	position: fixed;
+	z-index: 999;
+	bottom: 1em;
+	right: 5px;
+	opacity: 0.5;
+
+
+	.scrollTop {
+		text-decoration: none;
+		// float: right;
+	}
+
+	.scrollTop:after {
+		// content: "Scroll To Top";
+		margin: 0 auto;
+	}
+
+
+}
+
+
 
 
 /* ==========================================================================
