@@ -28,7 +28,6 @@ body{
 
 header{
 	display: flex;
-	min-height: 100px;
 	background-color: orange;
 
 	.logo{
@@ -51,7 +50,9 @@ nav {
 		margin: 0;
 		padding: 0;
 
-      a{
+
+		a{
+			font-size:24px;
 			margin-right: 30px;
 			background-color: grey;
 			color: white;
@@ -60,7 +61,7 @@ nav {
 			text-decoration: none;
 			text-align:center;
 			width:100px;
-			padding: 10px;
+			padding: 0.625rem;
 			display: inline-block;
 
 
@@ -72,10 +73,6 @@ nav {
       a.active{background-color: #f44336;}
 
     }
-
-	p{
-		color:blue;
-	}
 }
 
 main{
@@ -111,21 +108,20 @@ main{
 
 .fullscreen_img{
 	display:flex;
-    justify-content: center;
+    justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
 
 
 	.scroll_container{
       display: flex;
-      height: 100px;
-      background-color:#e9241d;
+      height: 150px;
+	  width: 150px;
+      margin-top:600px;
 
 		.scroll_arrow{
-			position: absolute;
-            bottom: 10px;
-			width: 150px;
-			height: 150px;
-            margin: 0 auto;
-
+			width: 75px;
+			height: 75px;
 
 			&:hover{ 
 				cursor: pointer; 
@@ -136,15 +132,11 @@ main{
 
 
     #circle{
-      position: absolute;
-      bottom: 26rem;
-      width: 150px;
-      height: 150px;
-      //box-shadow: 0 0 3pt 2pt #e9241d;
-      border-radius: 50%;
-      margin: 0 auto;
-      background: url('../images/me.jpg');
-      background-size: cover;
+		  width: 300px;
+		  height: 300px;
+		  border-radius: 50%;
+		  background: url('../images/me.jpg');
+		  background-size:cover;
     }
 
 }
@@ -233,11 +225,9 @@ footer{
 
 	.scrollTop {
 		text-decoration: none;
-		// float: right;
 	}
 
 	.scrollTop:after {
-		// content: "Scroll To Top";
 		margin: 0 auto;
 	}
 
@@ -269,8 +259,13 @@ $large-screen: 895px;
 
 @include phone-width{
 
-	.fullscreen_img{
-		display: none;
+	nav{
+		min-height: 200px;
+
+		a{
+			font-size: 2rem;
+		}
+
 	}
 
 }
@@ -285,9 +280,9 @@ $large-screen: 895px;
 		opacity: 0.8;
 		width: 100%;
 		position: fixed;
-		//z-index: 1;
 		top: 0;
 		right: 0;
+
 	}
 }
 
@@ -299,8 +294,8 @@ and (min-device-width : 320px)
 and (max-device-width : 568px)
 and (orientation : landscape) {
 
-  #circle, .scroll_arrow{
-    display: none;
+  #circle{
+	  display: none;
   }
   
 }
@@ -310,9 +305,14 @@ and (orientation : landscape) {
 and (min-device-width : 320px)
 and (max-device-width : 568px)
 and (orientation : portrait) {
-  #circle{
-    display: none;
-  }
+	nav{
+		//min-height: 100px;
+
+		a{
+			//font-size: 25px;
+		}
+
+	}
 }
 
 // 2.5 larger phones in landscape
@@ -321,8 +321,19 @@ and (min-device-width : 375px)
 and (max-device-width : 773px)
 and (orientation : landscape) {
   #circle{
-    display: none;
+    //display: none;
   }
+}
+
+// iPhone 6  Portrait
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+
+
 }
 
 
