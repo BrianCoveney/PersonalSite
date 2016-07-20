@@ -7,6 +7,9 @@
 # 2.0 Media Queries
 	# 2.1 Phone
 	# 2.1 Less that large screen
+	# 2.3 iPhone 5 & 5S in landscape
+    # 2.4 iPhone 5 & 5S in portrait
+    # 2.5 larger phones in landscape
 
 --------------------------------------------------------------*/
 
@@ -48,9 +51,9 @@ nav {
 		margin: 0;
 		padding: 0;
 
-		a{
+      a{
 			margin-right: 30px;
-			background-color: grey; 
+			background-color: grey;
 			color: white;
 			border-radius: 7px;
 			text-transform: uppercase;
@@ -58,18 +61,17 @@ nav {
 			text-align:center;
 			width:100px;
 			padding: 10px;
-			display: inline-block;	
+			display: inline-block;
+
 
 			&:hover{
 				background-color: #e9241d;
 			}
 		}
 
-
       a.active{background-color: #f44336;}
 
-
-	}
+    }
 
 	p{
 		color:blue;
@@ -92,7 +94,8 @@ main{
 		}
 	}
 
-	.fullscreen_img_container{
+	.fullscreen_img_container
+	{
 		display: flex;
 			.fullscreen_img{
 				background: url('../images/typing2.jpg')no-repeat center center;
@@ -110,22 +113,40 @@ main{
 	display:flex;
     justify-content: center;
 
+
 	.scroll_container{
       display: flex;
+      height: 100px;
+      background-color:#e9241d;
 
 		.scroll_arrow{
-			align-self: flex-end;
-			width: 75px;
-			height: 75px;
+			position: absolute;
+            bottom: 10px;
+			width: 150px;
+			height: 150px;
             margin: 0 auto;
-			margin-bottom: 50px;
-			
+
+
 			&:hover{ 
 				cursor: pointer; 
 
 			}
 		}
 	}
+
+
+    #circle{
+      position: absolute;
+      bottom: 26rem;
+      width: 150px;
+      height: 150px;
+      //box-shadow: 0 0 3pt 2pt #e9241d;
+      border-radius: 50%;
+      margin: 0 auto;
+      background: url('../images/me.jpg');
+      background-size: cover;
+    }
+
 }
 
 	section{
@@ -251,6 +272,7 @@ $large-screen: 895px;
 	.fullscreen_img{
 		display: none;
 	}
+
 }
 
 /* ==========================================================================
@@ -268,3 +290,39 @@ $large-screen: 895px;
 		right: 0;
 	}
 }
+
+
+
+// 2.3 iPhone 5 & 5S in landscape
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+
+  #circle, .scroll_arrow{
+    display: none;
+  }
+  
+}
+
+// 2.4 iPhone 5 & 5S in portrait
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+  #circle{
+    display: none;
+  }
+}
+
+// 2.5 larger phones in landscape
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 773px)
+and (orientation : landscape) {
+  #circle{
+    display: none;
+  }
+}
+
+

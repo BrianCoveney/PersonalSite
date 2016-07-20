@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 
 
-    //*** Smooth scroling to anchor on the same page ***/
+    /*** Smooth scroling to anchor on the same page ***/
     $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -48,10 +48,14 @@ $(document).ready(function() {
         }
     });
 
+    /*
+    * Style nav buttons when they are the current focus area,
+    * on this single page website
+    */
+    $('a:link').removeClass('active');
 
-    $('a:link').click(function()
-    {
-        $('body a').removeClass('active');
+    $('a:link').click(function() {
+        $('a').removeClass('active');
         $(this).addClass('active');
     });
 
