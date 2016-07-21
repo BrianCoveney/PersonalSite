@@ -21,7 +21,6 @@ $(document).ready(function() {
 
 
     /*** Floating scroll button ***/
-    var amountScrolled = 300;
     var duration = 500;
 
     $(window).scroll(function () {
@@ -48,15 +47,56 @@ $(document).ready(function() {
         }
     });
 
+
     /*
     * Style nav buttons when they are the current focus area,
     * on this single page website
     */
     $('a:link').removeClass('active');
-
     $('a:link').click(function() {
         $('a').removeClass('active');
         $(this).addClass('active');
     });
+
+    $(window).scroll(function () {
+        $('a:link').removeClass('active');
+    });
+
+
+
+
+    //** Triangle effects ***/
+    $('#triangle').mouseover(function () {
+        $(this).animate({
+            height: '0px'
+        })
+    });
+
+
+    $('#triangle').mouseleave(function () {
+        $(this).animate({
+            height: '20px'
+        })
+    });
+
+
+    /*
+    * Toggle transparency of the Nav:
+    * transparency increased when
+    * page scrolled to the top,
+    * otherwise solid
+    */
+    $(window).scroll(function () {
+        if($(window).scrollTop() !=0) {
+            $('nav').css('opacity', '1');
+        }else{
+            $('nav').css('opacity', '0.8');
+        }
+    })
+
+
+
+
+
 
 });
