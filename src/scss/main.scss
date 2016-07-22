@@ -23,7 +23,8 @@ body {
 
 header {
   display: flex;
-  background-color: orange;
+  justify-content: center;
+
 
   .logo {
     text-align: center;
@@ -36,14 +37,26 @@ header {
 
 nav {
   background-color: grey;
+  align-self: center;
+  max-width: 60%;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  //right: 0;
+
+
 
   ul {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
+
+    li:last-child{
+      //margin-right: 300px;
+    }
 
     a {
       font-size: 24px;
@@ -61,6 +74,8 @@ nav {
       &:hover {
         background-color: #e9241d;
       }
+
+
     }
 
     a.active {
@@ -88,6 +103,7 @@ main {
 
   .fullscreen_img_container {
     display: flex;
+
     .fullscreen_img {
       background: url('../images/typing2.jpg') no-repeat center center;
       background-size: cover;
@@ -95,46 +111,57 @@ main {
       min-width: 100vw;
       height: auto;
       width: auto;
+
     }
-  }
-}
 
-.fullscreen_img {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-
-
-
-  #circle_profile_pic {
-    width: 300px;
-    height: 300px;
-    margin-top: 100px;
-    border-radius: 50%;
-    background: url('../images/me.jpg');
-    background-size: cover;
+    .fullscreen_img::before {
+      background-color: rgba(0, 0, 0, 0.37);
+      content: '';
+      width: 100px;
+      height: 600px;
+      position: absolute;
+      right: 50px;
+      top: -200px;
+      //transform: skew(10deg);
+      transform: rotate(-45deg);
+      //transform-origin: 20% 150%;
+    }
 
   }
 
 
+  .fullscreen_img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 
-  #triangle{
-    width: 0;
-    height: 0;
-    border-top: 140px solid #20a3bf;
-    border-left: 70px solid transparent;
-    border-right:70px solid transparent;
-    opacity: 0.5;
+    #circle_profile_pic {
+      width: 300px;
+      height: 300px;
+      margin-top: 100px;
+      border-radius: 50%;
+      background: url('../images/me.jpg');
+      background-size: cover;
 
-  }
+    }
 
-  // remove Firefox blue border
-  a:focus{
-    outline:0;
-  }
+    #triangle {
+      width: 0;
+      height: 0;
+      border-top: 140px solid #20a3bf;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+      opacity: 0.5;
 
+    }
 
+    // remove Firefox blue border
+    a:focus {
+      outline: 0;
+    }
+
+   }
 }
 
 section {
@@ -216,7 +243,7 @@ footer {
 }
 
 /* ==========================================================================
- 2.0  Media Queries 
+ 2.0  Media Queries
  ========================================================================== */
 
 $phone-width: 380px;
@@ -235,7 +262,7 @@ $large-screen: 895px;
 }
 
 /* ==========================================================================git
- 2.1  < Phone 
+ 2.1  < Phone
  ========================================================================== */
 
 @include phone-width {
@@ -258,11 +285,6 @@ $large-screen: 895px;
 @include large-screen {
 
   nav {
-    opacity: 0.8;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
 
   }
 }
@@ -299,5 +321,4 @@ $large-screen: 895px;
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 
 }
-
 
