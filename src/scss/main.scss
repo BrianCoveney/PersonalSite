@@ -53,11 +53,13 @@ header {
 nav {
   background-color: grey;
   align-self: center;
-  max-width: 60%;
+  min-width: 60%;
   opacity: 0.8;
   position: fixed;
   top: 0;
   z-index: 2;
+  border-radius: 7px;
+
 
 
 
@@ -69,13 +71,13 @@ nav {
     margin: 0;
     padding: 0;
 
-    li:first-child{
-      margin-left: 30px;
-    }
 
-    li:last-child{
-      margin-right: 30px;
-    }
+    li:nth-of-type(1){ margin-left: 30px; }
+
+    li:nth-of-type(2){ margin: 0 30px 0 30px; }
+
+    li:nth-of-type(3){ margin-right: 30px; }
+
 
     a {
       font-size: 24px;
@@ -87,7 +89,6 @@ nav {
       text-align: center;
       width: 200px;
       padding: 0.625rem;
-      margin-left: 30px;
       display: inline-block;
 
       &:hover {
@@ -130,11 +131,33 @@ main {
       background: url('../images/typing2.jpg') no-repeat center center;
       background-size: cover;
       min-height: 100vh;
-      //transform: skew(10deg);
       z-index: -1;
       min-width: 100vw;
       height: auto;
       width: auto;
+
+
+      .txt_over_main_img{
+        font-family: Ailerons;
+        margin-top: 0;
+        text-align: center;
+
+
+        p span{
+          color: #fff;
+          font-size: 8rem;
+          text-shadow: 0 0 3rem #000;
+
+        }
+
+        p{
+          color: #cc0000;
+          display: inline-block;
+          font-size: 4rem;
+
+        }
+
+      }
 
     }
 
@@ -201,7 +224,7 @@ main {
 
     }
 
-    // remove Firefox blue border
+    // removes Firefox blue border
     a:focus {
       outline: 0;
     }
@@ -217,7 +240,7 @@ section {
   flex-basis: 100%;
   overflow: hidden;
 
-  
+
   .section_inner{
     display: flex;
     flex-wrap: wrap;
@@ -233,9 +256,9 @@ section {
 
     p{
       font-size: 1.4em;
-      width:26em;
+      width:50%;
       margin:auto;
-      margin-bottom:1em;
+      margin-top:1em;
       transform:skew(10deg);
       font-weight: bold;
     }
@@ -246,9 +269,8 @@ section {
       margin-top: -0.05em;
       margin-right: .08em;
       margin-bottom: -0.2em;
-      color: red;
+      color: black;
       transform:skew(10deg);
-      margin-left: 20px;
 
     }
 
@@ -271,7 +293,7 @@ section {
 }
 
 article {
-  background-color: orange;
+  background-color: #fff;
   min-height: 80vh;
   flex-basis: 50%;
   padding-top: 100px;
@@ -290,6 +312,7 @@ article {
   }
 
   .content2{
+    color: red;
 
   }
 
