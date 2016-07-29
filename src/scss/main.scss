@@ -53,7 +53,8 @@ header {
 nav {
   background-color: grey;
   align-self: center;
-  min-width: 60%;
+  width: 60%;
+  max-width: 725px;
   opacity: 0.8;
   position: fixed;
   top: 0;
@@ -87,15 +88,12 @@ nav {
       text-transform: uppercase;
       text-decoration: none;
       text-align: center;
-      width: 200px;
       padding: 0.625rem;
       display: inline-block;
 
       &:hover {
         background-color: #e9241d;
       }
-
-
     }
 
     a.active {
@@ -166,7 +164,7 @@ main {
   .fullscreen_img_container{
 
 
-    .rect{
+    .shape_rect{
       background-color: #fff;
       opacity: 0.4;
       content: '';
@@ -190,6 +188,7 @@ main {
         right:-5px;
         top: -120px;
 
+
       }
     }
 
@@ -209,8 +208,6 @@ main {
       border-radius: 50%;
       background: url('../images/me.jpg');
       background-size: cover;
-      //transform: skew(-10deg);
-      //margin-left: 200px;
     }
 
     #triangle {
@@ -285,8 +282,6 @@ section {
       //color: #000;
 
     }
-
-
 
   }
   
@@ -449,21 +444,14 @@ $large-screen: 1025px;
 
 // 2.4 iPhone 5 & 5S in portrait
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
-  nav {
-    //min-height: 100px;
 
-    a {
-      //font-size: 25px;
-    }
 
-  }
+
 }
 
 // 2.5 larger phones in landscape
 @media only screen and (min-device-width: 375px) and (max-device-width: 773px) and (orientation: landscape) {
-  #circle {
-    //display: none;
-  }
+
 }
 
 // 2.6 iPhone 6  Portrait
@@ -477,11 +465,17 @@ $large-screen: 1025px;
   section {
     .section_inner {
       transform: skew(0deg);
+
+      p{ transform:skew(0deg); }
     }
   }
 
   main{
     flex-direction: column;
+  }
+
+  article .content2{
+    font-size: 0.75rem;
   }
 
 }
