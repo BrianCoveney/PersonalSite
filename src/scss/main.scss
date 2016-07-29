@@ -20,14 +20,14 @@
 
 @font-face {
   font-family: Ailerons;
-  src: url("/src/fonts/Ailerons-Typeface.otf") format("opentype");
+  src: url("../fonts/Ailerons-Typeface.otf") format("opentype");
 }
 
 
 @font-face {
   font-family: Ailerons;
   font-weight: bold;
-  src: url("/src/fonts/Ailerons-Typeface.otf") format("opentype");
+  src: url("../fonts/Ailerons-Typeface.otf") format("opentype");
 }
 
 
@@ -138,7 +138,7 @@ main {
 
 
       .txt_over_main_img{
-        font-family: Ailerons;
+        font-family: Ailerons, "Courier New", monospace;;
         margin-top: 0;
         text-align: center;
 
