@@ -126,7 +126,9 @@ main {
     z-index: 1;
 
     .fullscreen_img {
-      background: url('../images/typing2.jpg') no-repeat center center;
+      background: url('../images/typing2.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
       background-size: cover;
       min-height: 100vh;
       z-index: -1;
@@ -407,75 +409,23 @@ $large-screen: 1025px;
   }
 }
 
-/* ==========================================================================git
- 2.1  < Phone
- ========================================================================== */
 
-@include phone-width {
 
-  nav {
-    min-height: 200px;
-
-    a {
-      font-size: 2rem;
-    }
-
+@mixin mobile-landscape {
+  @media only screen and (min-width : 321px) {
+    @content
   }
-
 }
-
-/* ==========================================================================
- 2.2  large screen
- ========================================================================== */
-
-@include above-large-screen {
-
-
-}
-
-// 2.3 iPhone 5 & 5S in landscape
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
-
-  #circle {
-    display: none;
-  }
-
-}
-
-// 2.4 iPhone 5 & 5S in portrait
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
-
-
-
-}
-
-// 2.5 larger phones in landscape
-@media only screen and (min-device-width: 375px) and (max-device-width: 773px) and (orientation: landscape) {
-
-}
-
-// 2.6 iPhone 6  Portrait
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@include mobile-landscape{
 
 }
 
 
 @include below-large-screen {
 
-  section {
-    .section_inner {
-      transform: skew(0deg);
-
-      p{ transform:skew(0deg); }
+    nav{
+      min-width: 100%;
+      position: relative;
     }
-  }
-
-  main{
-    flex-direction: column;
-  }
-
-  article .content2{
-    font-size: 0.75rem;
-  }
 
 }
