@@ -65,19 +65,19 @@ $(document).ready(function() {
 
 
 
-    //** Triangle effects ***/
-    $('#triangle').mouseover(function () {
-        $(this).animate({
-            height: '0px'
-        })
-    });
-
-
-    $('#triangle').mouseleave(function () {
-        $(this).animate({
-            height: '20px'
-        })
-    });
+    // //** Triangle effects ***/
+    // $('#triangle').mouseover(function () {
+    //     $(this).animate({
+    //         height: '0px'
+    //     })
+    // });
+    //
+    //
+    // $('#triangle').mouseleave(function () {
+    //     $(this).animate({
+    //         height: '20px'
+    //     })
+    // });
 
 
     /*
