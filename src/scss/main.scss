@@ -192,8 +192,8 @@ main {
     flex-direction: column;
 
     #circle_profile_pic {
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
       margin-top: 100px;
       border-radius: 50%;
       background: url('../images/me.jpg');
@@ -417,7 +417,7 @@ footer {
  ========================================================================== */
 
 $phone-width: 380px;
-$large-screen: 1025px;
+$large-screen: 1366px;
 
 @mixin phone-width {
   @media (max-width: $phone-width) {
@@ -451,9 +451,20 @@ $large-screen: 1025px;
 
 @include below-large-screen {
 
-    nav{
-      min-width: 100%;
-      position: relative;
+  nav {
+    min-width: 100%;
+    position: relative;
+  }
+
+  .txt_over_main_img {
+    p span {
+      font-size: 6rem !important;
     }
 
+    p {
+      font-size: 3rem;
+    }
+
+  }
 }
+
