@@ -277,8 +277,7 @@ section {
         margin-right: 5em;
 
 
-        span{
-          font-weight:normal;}
+        span{ font-weight:normal;}
 
         p{
           font-size: 1.4rem;
@@ -290,9 +289,7 @@ section {
             font-size: 1.4rem;
             float:none;
             font-weight: normal;
-            margin-top: 0;
-            margin-right: 0;
-            margin-bottom: 0;
+            margin: 0;
           }
 
         }
@@ -306,49 +303,46 @@ section {
 
     h3{margin-right: 5em}
 
-
-    .content {
-      display: flex;
-      transform: skew(0deg);
-      overflow: hidden;
-      max-width: 800px;
-      margin-left: 50px;
-      z-index: 4;
-      //color: #000;
-
-    }
-
   }
 
 }
 
 article {
-  background-color: #fff;
+  background-color: #eaeff2;
   min-height: 80vh;
-  flex-basis: 50%;
+  flex-basis: 100%;
   padding-top: 100px;
+  padding-right: 200px;
+
+  #part3{
+    background-color: #334055;
+    min-height: 60vh;
+    flex-basis: 80%;
+    padding-top: 80px;
+    padding-right: 200px;
+  }
 
 
+  p{
+    font-size: 1.4em;
+    color: #eaeff2;
+  }
 
   .app_screenshot{
     width: 280px;
-    height: 480px;
-    border-radius: 80px/80px;
+    height: 500px;
+    border-radius: 60px/80px;
     background: url('../images/app_Task.png');
     background-size: cover;
     background-repeat: no-repeat;
     float: left;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-left: 100px;
     margin-top: 10px;
-    z-index:1;
-    shape-outside: ellipse(60% 60% at 50% 50%);
-  }
-
-  .content2{
-
-    color: red;
+    shape-outside: ellipse(65% 60% at 50% 50%);
 
   }
+
 }
 
 
@@ -365,14 +359,18 @@ aside {
 
 
 footer {
-  background-color: yellow;
+  background-color: #fff;
   min-height: 200px;
   flex: 1;
+  display: flex;
+
+  .github_icon{align-self: center;}
 
   p {
     color: red;
     text-align: center;
     margin: 0;
+    margin-top: 100px;
   }
 }
 
