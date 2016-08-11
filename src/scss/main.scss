@@ -143,7 +143,9 @@ main {
       .txt_over_main_img{
         font-family: Ailerons, "Courier New", monospace;
         margin-top: 0;
+        margin-bottom: 15rem;
         text-align: center;
+
 
 
         p span{
@@ -192,30 +194,13 @@ main {
     flex-direction: column;
 
     #circle_profile_pic {
-      width: 200px;
-      height: 200px;
+      width: 280px;
+      height: 280px;
       margin-top: 100px;
       border-radius: 50%;
       background: url('../images/me.jpg');
       background-size: cover;
     }
-
-    #triangle {
-      width: 0;
-      height: 0;
-      border-top: 140px solid #20a3bf;
-      border-left: 90px solid transparent;
-      border-right: 90px solid transparent;
-      opacity: 0.5;
-
-
-    }
-
-    // removes Firefox blue border
-    a:focus {
-      outline: 0;
-    }
-
    }
 }
 
@@ -227,7 +212,8 @@ section {
   background-color: #334055;
   flex-basis: 100%;
   overflow: hidden;
-
+  padding-bottom: 10rem;
+  padding-top: 10rem;
 
 
   .section_inner{
@@ -237,33 +223,34 @@ section {
     min-width:100%;
     min-height:100%;
     background: #eaeff2;
-    transform: skew(-10deg);
+    //transform: skew(-10deg);
     overflow: hidden;
     margin-left: 20%;
     padding-left: 2em;
-    padding-right: 1em;
-
+    padding-top: 5em;
 
     // This clipping region,
     // cuts off a part of the section on the rhs
-    clip-path: polygon(0 100%, 0 0, 80% 0, 80% 100%);
+    //clip-path: polygon(0 100%, 0 0, 80% 0, 80% 100%);
 
 
 
     p{
       font-size: 1.4em;
-      margin-top:5em;
-      margin-right: 5em;
       font-weight: bold;
       width:80%;
       align-self: flex-start;
       color: #334055;
-
     }
 
-    .pt2{
-      margin-top: 0;
 
+
+    p:first-letter{
+      font-size: 2.4em;
+      float:left;
+      margin-top: -0.10em;
+      margin-right: .08em;
+      margin-bottom: -0.2em;
     }
 
 
@@ -272,7 +259,6 @@ section {
 
     h3 {
       font-size: 1.4em;
-      margin-left: 4em;
       color: #334055;
 
     }
@@ -280,21 +266,45 @@ section {
 
     ul {
       list-style-type: circle;
-      margin-left: 5em;
+
+
 
 
       li{
         font-size: 1.4em;
         color: #334055;
+        font-weight:bold;
+        margin-right: 5em;
+
+
+        span{
+          font-weight:normal;}
+
+        p{
+          font-size: 1.4rem;
+          font-weight:normal;
+
+
+
+          &:first-letter{
+            font-size: 1.4rem;
+            float:none;
+            font-weight: normal;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+          }
+
+        }
 
         &:first-of-type{
           margin-bottom:2em;
 
         }
-
       }
-
     }
+
+    h3{margin-right: 5em}
 
 
     .content {
@@ -309,7 +319,7 @@ section {
     }
 
   }
-  
+
 }
 
 article {
@@ -320,18 +330,22 @@ article {
 
 
 
-  .circle_pic{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: url('../images/me.jpg');
+  .app_screenshot{
+    width: 280px;
+    height: 480px;
+    border-radius: 80px/80px;
+    background: url('../images/app_Task.png');
     background-size: cover;
+    background-repeat: no-repeat;
     float: left;
-    margin-right: 20px;
-    shape-outside: circle(50%);
+    margin-right: 10px;
+    margin-top: 10px;
+    z-index:1;
+    shape-outside: ellipse(60% 60% at 50% 50%);
   }
 
   .content2{
+
     color: red;
 
   }
@@ -416,8 +430,9 @@ footer {
  2.0  Media Queries
  ========================================================================== */
 
+
 $phone-width: 380px;
-$large-screen: 1366px;
+$large-screen: 1025px;
 
 @mixin phone-width {
   @media (max-width: $phone-width) {
@@ -451,10 +466,20 @@ $large-screen: 1366px;
 
 @include below-large-screen {
 
-  nav {
+  nav{
     min-width: 100%;
     position: relative;
   }
+
+    .fullscreen_img {
+
+      #circle_profile_pic {
+        max-width: 200px;
+        max-height: 200px;
+      }
+
+    }
+
 
   .txt_over_main_img {
     p span {
@@ -464,7 +489,7 @@ $large-screen: 1366px;
     p {
       font-size: 3rem;
     }
-
   }
+
 }
 
