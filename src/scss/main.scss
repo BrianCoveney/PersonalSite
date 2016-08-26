@@ -62,7 +62,8 @@ nav {
   position: fixed;
   top: 0;
   z-index: 2;
-  border-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
 
 
 
@@ -215,6 +216,7 @@ section {
   overflow: hidden;
   padding-bottom: 10rem;
   padding-top: 10rem;
+  margin-bottom: 20px;
 
 
   .section_inner{
@@ -304,108 +306,121 @@ section {
 
 }
 
-article {
-  background-color: #eaeff2;
-  min-height: 80vh;
-  flex-basis: 45%;
-  padding-top: 100px;
-  padding-right: 10px;
+/***  ***/
 
-  #part3{
+.project_wrapper{
+  display: flex;
+  //justify-content: space-between;
+
+  article {
+    flex-basis: 50%;
     background-color: #334055;
-    min-height: 60vh;
-    padding-top: 80px;
-    padding-right: 50px;
-    padding-left: 20px;
-  }
-
-
-  p{
-    font-size: 1.0em;
-    line-height: 1.5em;
-    color: #eaeff2;
-  }
-
-  .app_screenshot{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: url('../images/app_Task.png');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #cc0000;
-    float: left;
     margin-right: 20px;
-    shape-outside: circle(50%);
-  }
-}
 
 
-aside {
-  background-color: #eaeff2;
-  min-height: 80vh;
-  padding-top: 100px;
-  flex-basis: 45%;
+    #part3{
+      padding-top: 80px;
+      padding-bottom: 20px;
+      padding-right: 50px;
+      padding-left: 20px;
+    }
 
-
-  .content_wrapper{
-    background-color: #334055;
-    min-height: 60vh;
-    padding-top: 80px;
-    padding-right: 50px;
-    padding-left: 20px;
 
     p{
       font-size: 1.0em;
       line-height: 1.5em;
       color: #eaeff2;
     }
+
+    .app_screenshot{
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: url('../images/app_Task.png');
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #cc0000;
+      float: left;
+      margin-right: 20px;
+      shape-outside: circle(50%);
+    }
   }
 
-  .app_screenshot{
-    width: 250px;
-    height: 250px;
-    background: url('../images/java_wc.jpg');
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #cc0000;
-    float: left;
-    margin-right: 20px;
+  /***  ***/
+  aside {
+    flex-basis: 50%;
+    background-color: #334055;
+
+
+    .content_wrapper{
+      padding-top: 80px;
+      padding-bottom: 20px;
+      padding-right: 50px;
+      padding-left: 20px;
+
+      p{
+        font-size: 1.0em;
+        line-height: 1.5em;
+        color: #eaeff2;
+      }
+    }
+
+    .app_screenshot{
+      width: 250px;
+      height: 250px;
+      background: url('../images/java_wc.jpg');
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #cc0000;
+      float: left;
+      margin-right: 20px;
+    }
   }
 }
 
-.projects{
-  padding-top: 0;
-  background-color: #eaeff2;
-  min-height: 80vh;
-  flex-basis: 45%;
-  overflow: hidden;
+.project_wrapper_below {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
 
 
+  /***  ***/
+  .projects {
+    background-color: #334055;
+    flex-basis: 50%;
+    overflow: hidden;
+    color: #fff;
 
-  .app_screenshot {
-    width: 500px;
-    height: 303px;
-    background: url('../images/website_napoli.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 50px;
-  }
+    &.three {
+      padding: 20px;
 
-  &.four{
-    margin-left: 10px;
+      .app_screenshot {
+        width: 500px;
+        height: 303px;
+        background: url('../images/website_napoli.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 50px;
+      }
 
-    .app_screenshot {
-      width: 500px;
-      height: 343px;
-      background: url('../images/website_architects.jpg');
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      margin-bottom: 50px;
+    }
+
+    &.four {
+      padding: 20px;
+      margin-left: 20px;
+
+      .app_screenshot {
+        width: 500px;
+        height: 343px;
+        background: url('../images/website_architects.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 50px;
+      }
     }
   }
 }
@@ -519,42 +534,53 @@ $large-screen: 1025px;
 
 @include below-large-screen {
 
-  nav{
+  nav {
     min-width: 100%;
     position: relative;
   }
 
   main {
 
-    article {
-      padding-right:0;
-      padding-top: 40px;
-      flex-basis: 100%;
-      min-height: 400px;
+    .project_wrapper {
+      flex-wrap: wrap;
+      margin-bottom: 0;
 
-      #part3{
+      article {
+        padding-right: 0;
+        padding-top: 40px;
+        flex-basis: 100%;
         min-height: 400px;
+        margin-right: 0;
+        margin-bottom: 20px;
+
+        #part3 {
+          min-height: 400px;
+        }
+
+      }
+
+      aside {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+
+        .content_wrapper {
+          min-height: 400px;
+        }
+
+      }
+    }
+
+    .projects {
+      flex-basis: 100%;
+      min-height: 100%;
+      margin-top: 0;
+
+      &.three {
+        margin-bottom: 20px;
       }
 
     }
-
-    aside{
-      padding-top: 25px;
-      flex-basis: 100%;
-      min-height: 100%;
-
-      .content_wrapper{min-height: 400px;}
-
-    }
-
-    .projects{
-      flex-basis: 100%;
-      min-height: 100%;
-    }
-
   }
-
-
 
   .fullscreen_img {
 
@@ -564,7 +590,6 @@ $large-screen: 1025px;
     }
 
   }
-
 
   .txt_over_main_img {
     p span {
@@ -576,8 +601,18 @@ $large-screen: 1025px;
     }
   }
 
+  .project_wrapper_below {
+    flex-wrap: wrap;
 
+    .projects {
+      flex-basis: 100%;
+      min-height: 400px;
 
+      &.four {
+        margin-left: 0;
 
+      }
+
+    }
+  }
 }
-
