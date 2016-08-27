@@ -283,6 +283,9 @@ section {
 
 
 
+
+
+
           &:first-letter{
             font-size: 1.0em;
             line-height: 1.5em;
@@ -398,9 +401,10 @@ section {
 
       .app_screenshot {
         width: 500px;
-        height: 303px;
+        height: 343px;
+        background-color: #cc0000;
         background: url('../images/website_napoli.jpg');
-        background-size: 100%;
+        //background-size: 100%;
         background-repeat: no-repeat;
         background-position: center;
         margin-bottom: 50px;
@@ -429,12 +433,14 @@ section {
 
 
 footer {
-  background-color: #fff;
-  min-height: 200px;
-  flex: 1;
   display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #334055;
+  min-height: 200px;
+  margin-top: 20px;
 
-  .github_icon{align-self: center;}
 
   p {
     color: red;
@@ -442,6 +448,33 @@ footer {
     margin: 0;
     margin-top: 100px;
   }
+
+
+  .social_icon{
+    width: 48px;
+    height:48px;
+
+
+      .icon {
+        fill: #00abf1;
+      }
+      // color rectangle blue
+      .icon_logo {
+        fill: #fff;
+      }
+      // color inner logo white
+
+      &:hover {
+        // on hover invert the colours
+        .icon {
+          fill: #fff;
+        }
+        .icon_logo {
+          fill: #00abf1;
+        }
+      }
+  }
+
 }
 
 
@@ -500,35 +533,14 @@ footer {
 
 
 $phone-width: 380px;
+$tablet-width: 601px;
 $large-screen: 1025px;
 
-@mixin phone-width {
-  @media (max-width: $phone-width) {
-    @content;
-  }
-}
-
-@mixin above-large-screen {
-  @media (min-width: $large-screen) {
-    @content;
-  }
-}
 
 @mixin below-large-screen {
-  @media (max-width: $large-screen) {
+  @media (min-width: $phone-width) and (max-width: $large-screen) {
     @content;
   }
-}
-
-
-
-@mixin mobile-landscape {
-  @media only screen and (min-width : 321px) {
-    @content
-  }
-}
-@include mobile-landscape{
-
 }
 
 
