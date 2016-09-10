@@ -315,8 +315,15 @@ section {
 
   article {
     flex-basis: 50%;
-    background-color: #334055;
     margin-right: 20px;
+    background: url('../images/android_figure.png');
+    background-size: 75px;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 95%;
+    background-color: #334055;
+    padding-bottom: 20px;
+
 
 
     #part3{
@@ -324,8 +331,8 @@ section {
       padding-bottom: 20px;
       padding-right: 50px;
       padding-left: 20px;
-    }
 
+    }
 
     p{
       font-size: 1.0em;
@@ -341,7 +348,8 @@ section {
       background-size: 50%;
       background-repeat: no-repeat;
       background-position: center;
-      background-color: #cc0000;
+      background-color: #CCBFAA;
+      border: 3px solid black;
       float: left;
       margin-right: 20px;
       shape-outside: circle(50%);
@@ -352,6 +360,7 @@ section {
   aside {
     flex-basis: 50%;
     background-color: #334055;
+    padding-bottom: 20px;
 
 
     .content_wrapper{
@@ -375,7 +384,9 @@ section {
       background-size: 80%;
       background-repeat: no-repeat;
       background-position: center;
-      background-color: #cc0000;
+      background-color: #CCBFAA;
+      border: 3px solid black;
+      border-radius: 30px;
       float: left;
       margin-right: 20px;
     }
@@ -405,16 +416,22 @@ section {
       padding: 20px;
       margin-bottom: 20px;
 
-      .content_wrapper a {background-color: red;}
+      a {
+        display: block;
+        max-width: 500px;
+      }
 
       .app_screenshot {
         width: 500px;
         height: 310px;
-        background-color: #cc0000;
         background: url('../images/website_napoli.jpg');
+        background-color: #CCBFAA;
         background-size: 80%;
         background-repeat: no-repeat;
         background-position: center;
+        border: 3px solid black;
+        border-raius: 30px;
+        background-origin: content-box;
         margin-right: 10px;
         margin-bottom: 20px;
       }
@@ -426,13 +443,23 @@ section {
       margin-bottom: 20px;
       margin-left: 20px;
 
+      a{
+        display: inline-block;
+        max-width: 500px;
+        max-height: 310px;
+      }
+
       .app_screenshot {
         width: 500px;
         height: 310px;
         background: url('../images/website_architects.jpg');
+        background-color: #CCBFAA;
         background-size: 80%;
         background-repeat: no-repeat;
         background-position: center;
+        border: 3px solid black;
+        border-radius: 30px;
+        background-origin: content-box;
         margin-right: 10px;
         margin-bottom: 20px;
       }
@@ -463,6 +490,7 @@ footer {
   .social_icon{
     width: 48px;
     height:48px;
+    z-index: 1;
 
 
       // initially color icons bg and graphic
