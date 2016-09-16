@@ -18,7 +18,6 @@
 /* ==========================================================================
  1.0 General
  ========================================================================== */
-@import 'normalize.css';
 
 
 @font-face {
@@ -316,18 +315,13 @@ section {
   article {
     flex-basis: 50%;
     margin-right: 20px;
-    background: url('../images/android_figure.png');
-    background-size: 75px;
-    background-repeat: no-repeat;
-    background-position-x: 100%;
-    background-position-y: 95%;
     background-color: #334055;
     padding-bottom: 20px;
 
 
 
     #part3{
-      padding-top:40px;
+      padding-top:20px;
       padding-bottom: 20px;
       padding-right: 50px;
       padding-left: 20px;
@@ -407,6 +401,9 @@ section {
     flex-basis: 50%;
 
 
+
+
+
     .proj_desc{
       color: #fff;
       padding-left: 50px;
@@ -432,8 +429,10 @@ section {
         border: 3px solid black;
         border-raius: 30px;
         background-origin: content-box;
-        margin-right: 10px;
+        margin-right: 20px;
         margin-bottom: 20px;
+        float: left;
+
       }
 
     }
@@ -443,8 +442,10 @@ section {
       margin-bottom: 20px;
       margin-left: 20px;
 
+
+
       a{
-        display: inline-block;
+        display: block;
         max-width: 500px;
         max-height: 310px;
       }
@@ -458,15 +459,35 @@ section {
         background-repeat: no-repeat;
         background-position: center;
         border: 3px solid black;
-        border-radius: 30px;
+        border-raius: 30px;
         background-origin: content-box;
-        margin-right: 10px;
+        margin-right: 20px;
         margin-bottom: 20px;
+        float: left;
+
       }
     }
   }
 }
 
+.project_wrapper_below  {
+
+
+
+  ul{
+    list-style-type: square;
+    position: relative;
+    left: 2em;
+
+    li {
+      font-size: 1.0em;
+      line-height: 1.5em;
+      color: #fff;
+      font-weight: bold;
+
+    }
+  }
+}
 
 
 
@@ -730,6 +751,8 @@ $extra-large-screen: 1600px;
 
       }
     }
+
+
 
     .fullscreen_img {
 
