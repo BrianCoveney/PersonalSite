@@ -372,17 +372,17 @@ section {
     }
 
     .app_screenshot{
-      width: 250px;
-      height: 250px;
-      background: url('../images/java_wc.jpg');
-      background-size: 80%;
+      width: 500px;
+      height: 350px;
+      background: url('https://cloud.githubusercontent.com/assets/8080260/26587073/2cc02d6e-4549-11e7-871e-d8540e6d2ddc.png');
+      background-size: 95%;
       background-repeat: no-repeat;
       background-position: center;
       background-color: #CCBFAA;
       border: 3px solid black;
-      border-radius: 30px;
+      border-radius: 10px;
       float: left;
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
 }
@@ -470,7 +470,7 @@ section {
   }
 }
 
-.project_wrapper_below  {
+.project_wrapper_below, .content_wrapper  {
 
 
 
