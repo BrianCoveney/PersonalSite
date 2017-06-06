@@ -1,6 +1,6 @@
 # My Personal Website
 
-## This is a [link to the site] (https://briancoveney.github.io/PersonalSite)
+## This is a [link to the site] (https://briancoveney.com)
 
 
 I previously built websites with *Grunt* and *Gulp*. This time I am trying my hand at *npm scripts*. I followed the steps in [this CSS tricks post]  (https://css-tricks.com/why-npm-scripts/)  to get things set up. 
